@@ -1,0 +1,29 @@
+{
+  "agent": {
+    "debug": false,
+    "metrics_collection_interval": 60,
+    "omit_hostname": true
+  },
+  "logs": {
+    "logs_collected": {
+      "windows_events": {
+        "collect_list": [
+          {
+            "event_format": "xml",
+            "event_levels": [
+              "VERBOSE",
+              "INFORMATION",
+              "WARNING",
+              "ERROR",
+              "CRITICAL"
+            ],
+            "event_name": "System",
+            "log_group_name": "System",
+            "log_stream_name": "{instance_id}",
+            "retention_in_days": 90
+          }
+        ]
+      }
+    }
+  }
+}
