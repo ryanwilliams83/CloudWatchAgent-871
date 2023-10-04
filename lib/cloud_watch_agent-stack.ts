@@ -11,9 +11,10 @@ export class CloudWatchAgentStack extends cdk.Stack {
 
     const keyPairName = "MyKeyPair";
     const versions = [
-      "1.4.37882",
-      "1.4.37884",
-      "latest"
+      "1.4.37882", // Good
+      "1.4.37884", // Bad
+      "1.4.37884-2-unsigned", // Good
+      "latest" // Good Luck
     ];
 
     const vpc = ec2.Vpc.fromVpcAttributes(this, "Vpc", {
